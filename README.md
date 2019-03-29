@@ -2,17 +2,25 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.2.4.
 
-## Development server
+## Code setup for development environment
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+#### 1. Code Repository Url
+Clone the code from `https://github.com/ashokmahla/QuotesMultijourney`.
 
-## Code scaffolding
+#### 2. Install dependencies
+Run `npm run-script clean:install` command for resolving the dependencies.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Run Development Server
 
-## Build
+Run `npm start` from command prompt for a dev server.The app will automatically load on URL `http://localhost:9020/`.The app reload if you change any of the source files.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+## Building Application
+
+#### 1. Clean build for development server
+Run `npm run-script build:dev` from command prompt for a development server clean build which first remove the **dist** folder if exists or create a new one if not exists.
+
+#### 2. Clean build for production server
+Run `npm run-script build:prod` from command prompt for a production server clean build which first remove the **dist** folder if exists or create a new one if not exists.
 
 ## Running unit tests
 
@@ -22,6 +30,12 @@ Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.
 
 Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
 
-## Further help
+## Code scaffolding
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+
+
+
+
+
+
