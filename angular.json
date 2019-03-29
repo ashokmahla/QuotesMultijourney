@@ -42,8 +42,12 @@
               "namedChunks": false,
               "aot": true,
               "extractLicenses": true,
-              "vendorChunk": false,
-              "buildOptimizer": true
+              "vendorChunk": true,              
+              "buildOptimizer": true,
+              "budgets": [
+                { "type": "bundle", "name": "main", "baseline": "256kb","warning": "123kb"},   
+                { "type": "bundle", "name": "vendor", "baseline": "256kb","warning": "123kb"}               
+               ]
             }
           }
         },
