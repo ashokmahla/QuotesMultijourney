@@ -42,12 +42,22 @@
               "namedChunks": false,
               "aot": true,
               "extractLicenses": true,
-              "vendorChunk": true,              
+              "vendorChunk": true,
               "buildOptimizer": true,
               "budgets": [
-                { "type": "bundle", "name": "main", "baseline": "256kb","warning": "123kb"},   
-                { "type": "bundle", "name": "vendor", "baseline": "256kb","warning": "123kb"}               
-               ]
+                {
+                  "type": "bundle",
+                  "name": "main",
+                  "baseline": "256kb",
+                  "warning": "123kb"
+                },
+                {
+                  "type": "bundle",
+                  "name": "vendor",
+                  "baseline": "256kb",
+                  "warning": "123kb"
+                }
+              ]
             }
           }
         },
@@ -119,6 +129,41 @@
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
             "tsConfig": "e2e/tsconfig.e2e.json",
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    },
+    "button": {
+      "root": "projects/button",
+      "sourceRoot": "projects/button/src",
+      "projectType": "library",
+      "prefix": "ele",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/button/tsconfig.lib.json",
+            "project": "projects/button/ng-package.json"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/button/src/test.ts",
+            "tsConfig": "projects/button/tsconfig.spec.json",
+            "karmaConfig": "projects/button/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/button/tsconfig.lib.json",
+              "projects/button/tsconfig.spec.json"
+            ],
             "exclude": [
               "**/node_modules/**"
             ]
