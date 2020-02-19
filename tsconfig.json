@@ -18,14 +18,6 @@
     "lib": [
       "es2017",
       "dom"
-    ],
-    "paths": {
-      "button": [
-        "dist/button"
-      ],
-      "button/*": [
-        "dist/button/*"
-      ]
-    }
+    ]
   }
 }
